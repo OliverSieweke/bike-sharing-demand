@@ -10,6 +10,7 @@ Welcome to Bike Sharing Demand's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   utilities
 
 
 Indices and tables
