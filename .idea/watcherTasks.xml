@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectTasksOptions">
-    <TaskOptions isEnabled="true">
+    <TaskOptions isEnabled="false">
       <option name="arguments" value="$FilePath$" />
       <option name="checkSyntaxErrors" value="false" />
       <option name="description" />
@@ -41,7 +41,7 @@
       <option name="workingDir" value="$ProjectFileDir$" />
       <envs />
     </TaskOptions>
-    <TaskOptions isEnabled="true">
+    <TaskOptions isEnabled="false">
       <option name="arguments" value="$FilePath$" />
       <option name="checkSyntaxErrors" value="false" />
       <option name="description" />
@@ -61,8 +61,8 @@
       <option name="workingDir" value="$ProjectFileDir$" />
       <envs />
     </TaskOptions>
-    <TaskOptions isEnabled="true">
-      <option name="arguments" value="--in-place --wrap-summaries=80 --wrap-descriptions=12 $FilePath$" />
+    <TaskOptions isEnabled="false">
+      <option name="arguments" value="--in-place --wrap-summaries=80 --wrap-descriptions=72 $FilePath$" />
       <option name="checkSyntaxErrors" value="false" />
       <option name="description" />
       <option name="exitCodeBehavior" value="NEVER" />
@@ -82,7 +82,7 @@
       <envs />
     </TaskOptions>
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="--in-place --wrap-summaries=80 --wrap-descriptions=12 $FilePath$" />
+      <option name="arguments" value="--in-place --wrap-summaries=80 --wrap-descriptions=72 $FilePath$" />
       <option name="checkSyntaxErrors" value="false" />
       <option name="description" />
       <option name="exitCodeBehavior" value="NEVER" />

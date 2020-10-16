@@ -101,10 +101,13 @@ def bump_dummies(dummy_variables_list: List[int], radius: float = 0) -> List[flo
     """
     dummy_indices = np.nonzero(dummy_variables_list)[0]
 
+    # print("Iteration")
     return [
         sum(
             map(
-                lambda dummy_index: bump_function(i, dummy_index, radius),
+                lambda dummy_index: bump_function(i, dummy_index, radius)
+                if abs(i - dummy_index) < radius
+                else 0,
                 dummy_indices,
             )
         )

@@ -70,23 +70,30 @@ class BikeRentalDataFrame(pd.DataFrame):
         -------
 
         """
-        dummies = pd.get_dummies(self.index.hour, prefix="rbf_hour")
+        # dummies = pd.get_dummies(self.index.hour, prefix="rbf_hour")
+        #
+        # bumped_dummies = dummies.apply(
+        #     lambda row: bump_dummies(row, radius=1.5), raw=True
+        # )
+        #
+        # return bumped_dummies
 
-        bumped_dummies = dummies.apply(
-            lambda row: bump_dummies(row, radius=1.5), raw=True
+        return pd.get_dummies(self.index.hour, prefix="rbf_hour")[0:50].apply(
+            lambda row: bump_dummies(row, radius=4), raw=True
         )
-
-        return self.append(bumped_dummies)
 
     @property
     def _constructor_expanddim(self) -> NotImplementedError:
         return super()._constructor_expanddim()
 
 
-def save_bumped_hour_dummies(file_name="bumped_hour_dummies")
+# def save_bumped_hour_dummies(file_name="bumped_hour_dummies")
+#
+# print("adsf")
+#
+# df = BikeRentalDataFrame().bump_hours()
+#
+# print(df)
 
-print("adsf")
+# BikeRentalDataFrame().bump_hours()
 
-df = BikeRentalDataFrame().bump_hours()
-
-print(df)
